@@ -1,14 +1,15 @@
 class Solution:
-    def printTriangle(self, N):
+    def printTriangle(self, n):
         # Code here
-        for i in range(0,N):
-            for k in range(0,N-i-1):
-                print(" ",end="")
-            for j in range(0,2*i+1):
-                print("*",end="")
-            # for k in range(1,N-i+1):
-            #     print(" ",end="")
+        for i in range(1,2*n):
+            
+            if i<=n:
+                stars=i
+            else:
+                stars=2*n-i
+            for j in range(0,stars):
+                print("*",end='')
             print()
-N=int(input())
+n=int(input())
 obj=Solution()
-obj.printTriangle(N)
+obj.printTriangle(n)
